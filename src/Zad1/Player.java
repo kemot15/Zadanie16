@@ -1,6 +1,5 @@
 package Zad1;
 
-import java.util.Comparator;
 
 public class Player {
     private String firstName;
@@ -42,10 +41,6 @@ public class Player {
 
     @Override
     public String toString() {
-        return "Player{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", points=" + points +
-                '}';
+        return firstName + " " + lastName + ";" + points;
     }
 }

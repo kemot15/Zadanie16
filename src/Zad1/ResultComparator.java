@@ -15,6 +15,7 @@ public class ResultComparator implements Comparator<Player> {
             return 1;
         if (o1.getPoints() < o2.getPoints())
             return -1;
-        return 0;
+        return  (o1.getFirstName().compareTo(o2.getFirstName()));
+
     }
 }
