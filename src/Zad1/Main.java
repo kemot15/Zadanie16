@@ -23,7 +23,7 @@ public class Main {
 
     private static List<Player> getPlayers (){
         Scanner scanner = new Scanner(System.in);
-        List<Player> players = new ArrayList();
+        List<Player> players = new ArrayList<>();
         String line = "";
         while (!line.toUpperCase().equals("STOP")){
             System.out.println("Podaj wyniki kolejnego gracza (lub stop):");
