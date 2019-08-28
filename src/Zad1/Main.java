@@ -12,7 +12,7 @@ public class Main {
         try {
             List<Player> players = getPlayers();
             players.sort(new ResultComparator());
-            savePlayers(players, PATH);
+            savePlayers(players);
             System.out.println("Dane posortowano i zapisano do pliku " + PATH);
         } catch (IOException e) {
             System.out.println("Sprawdz czy sciezka pliku jest poprawna");
@@ -37,8 +37,8 @@ public class Main {
         return players;
     }
 
-    private static void savePlayers (List<Player> players, String path) throws IOException {
-        FileWriter fr = new FileWriter(new File(path));
+    private static void savePlayers (List<Player> players) throws IOException {
+        FileWriter fr = new FileWriter(new File(PATH));
         BufferedWriter br = new BufferedWriter(fr);
         for (Player player : players){
             br.write(player.toString() + "\n");
