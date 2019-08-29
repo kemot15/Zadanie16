@@ -6,9 +6,13 @@ public class ResultComparator implements Comparator<Player> {
     @Override
     public int compare(Player o1, Player o2) {
         int pointsCompare = Integer.compare(o1.getPoints(), o2.getPoints());
-        if (pointsCompare == 0)
-            return (o1.getFirstName().compareTo(o2.getFirstName()));
-            else
-                return pointsCompare;
+        int fnCompare = o1.getFirstName().compareTo(o2.getFirstName());
+        int lnCompare = o1.getLastName().compareTo(o2.getLastName());
+        if (pointsCompare == 0) {
+            if (fnCompare == 0)
+                return lnCompare;
+            else return fnCompare;
+        } else
+            return pointsCompare;
     }
 }
